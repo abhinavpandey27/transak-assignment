@@ -1,0 +1,78 @@
+{
+  "id": "default",
+  "name": "Default Brand",
+  "logo": "/icons/default-logo.svg",
+  "colors": {
+    "primary": "#3b82f6",
+    "primaryForeground": "#ffffff",
+    "secondary": "#64748b",
+    "secondaryForeground": "#ffffff",
+    "accent": "#f1f5f9",
+    "accentForeground": "#0f172a",
+    "background": "#ffffff",
+    "foreground": "#0f172a",
+    "muted": "#f8fafc",
+    "mutedForeground": "#64748b",
+    "border": "#e2e8f0",
+    "input": "#ffffff",
+    "ring": "#3b82f6",
+    "success": "#10b981",
+    "warning": "#f59e0b",
+    "error": "#ef4444"
+  },
+  "copy": {
+    "appName": "CryptoRamp",
+    "tagline": "Seamless Crypto On/Off Ramp",
+    "login": {
+      "title": "Welcome Back",
+      "subtitle": "Enter your email to continue",
+      "emailPlaceholder": "Enter your email",
+      "otpTitle": "Enter OTP",
+      "otpSubtitle": "We've sent a 6-digit code to your email",
+      "otpPlaceholder": "Enter 6-digit code",
+      "submit": "Continue",
+      "resend": "Resend Code"
+    },
+    "home": {
+      "title": "Dashboard",
+      "deposit": "Deposit",
+      "withdraw": "Withdraw",
+      "receive": "Receive",
+      "transactions": "Transactions"
+    },
+    "deposit": {
+      "title": "Deposit Fiat",
+      "subtitle": "Convert fiat to crypto",
+      "amountLabel": "Amount (USD)",
+      "amountPlaceholder": "Enter amount",
+      "confirm": "Confirm Deposit"
+    },
+    "withdraw": {
+      "title": "Withdraw Crypto",
+      "subtitle": "Convert crypto to fiat",
+      "tokenLabel": "Select Token",
+      "amountLabel": "Amount",
+      "amountPlaceholder": "Enter amount",
+      "bankLabel": "Bank Account",
+      "bankPlaceholder": "Enter account number",
+      "ifscLabel": "IFSC Code",
+      "ifscPlaceholder": "Enter IFSC code",
+      "confirm": "Confirm Withdrawal"
+    },
+    "receive": {
+      "title": "Receive Crypto",
+      "subtitle": "Your assigned wallet address",
+      "copyAddress": "Copy Address",
+      "qrTitle": "Scan QR Code"
+    },
+    "transactions": {
+      "title": "Transaction History",
+      "noTransactions": "No transactions yet",
+      "status": {
+        "pending": "Pending",
+        "success": "Success",
+        "failed": "Failed"
+      }
+    }
+  }
+}
