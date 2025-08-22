@@ -162,22 +162,12 @@ const defaultBrand: BrandConfig = {
   }
 };
 
-// Available brands
-const availableBrands: Record<string, BrandConfig> = {
-  default: defaultBrand
-};
-
 /**
- * Load brand configuration by ID
- * @param brandId - Brand identifier
- * @returns Brand configuration or default if not found
+ * Load brand configuration (always returns default brand)
+ * @returns Default brand configuration
  */
-export function loadBrand(brandId?: string): BrandConfig {
-  if (!brandId || !availableBrands[brandId]) {
-    return defaultBrand;
-  }
-  
-  return availableBrands[brandId];
+export function loadBrand(): BrandConfig {
+  return defaultBrand;
 }
 
 /**

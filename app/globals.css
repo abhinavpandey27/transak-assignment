@@ -6,8 +6,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-instrument-sans);
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -117,6 +117,186 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
   }
+  
+  /* Ensure Instrument Sans is applied to all text elements */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-instrument-sans);
+  }
+  
+  p, span, div, button, input, label, a {
+    font-family: var(--font-instrument-sans);
+  }
+}
+
+/* ---------- Typography tokens (fluid between 420px and 1100px) ---------- */
+:root {
+  /* Title */
+  --title-1: clamp(48px, calc(48px + (64 - 48) * ((100vw - 420px) / (1100 - 420))), 64px);
+  --title-1-lh: clamp(58px, calc(58px + (70 - 58) * ((100vw - 420px) / (1100 - 420))), 70px);
+  --title-1-track: -0.8px;
+
+  --title-2: clamp(32px, calc(32px + (40 - 32) * ((100vw - 420px) / (1100 - 420))), 40px);
+  --title-2-lh: clamp(40px, calc(40px + (48 - 40) * ((100vw - 420px) / (1100 - 420))), 48px);
+  --title-2-track: -0.64px;
+
+  --title-3: clamp(28px, calc(28px + (32 - 28) * ((100vw - 420px) / (1100 - 420))), 32px);
+  --title-3-lh: clamp(32px, calc(32px + (36 - 32) * ((100vw - 420px) / (1100 - 420))), 36px);
+  --title-3-track: -0.6px;
+
+  /* Headings */
+  --h1: clamp(24px, calc(24px + (28 - 24) * ((100vw - 420px) / (1100 - 420))), 28px);
+  --h1-lh: clamp(28px, calc(28px + (32 - 28) * ((100vw - 420px) / (1100 - 420))), 32px);
+  --h1-track: -0.56px;
+
+  --h2: clamp(22px, calc(22px + (26 - 22) * ((100vw - 420px) / (1100 - 420))), 26px);
+  --h2-lh: clamp(26px, calc(26px + (30 - 26) * ((100vw - 420px) / (1100 - 420))), 30px);
+  --h2-track: -0.26px;
+
+  --h3: clamp(20px, calc(20px + (24 - 20) * ((100vw - 420px) / (1100 - 420))), 24px);
+  --h3-lh: clamp(24px, calc(24px + (28 - 24) * ((100vw - 420px) / (1100 - 420))), 28px);
+  --h3-track: -0.24px;
+
+  --h4: clamp(18px, calc(18px + (20 - 18) * ((100vw - 420px) / (1100 - 420))), 20px);
+  --h4-lh: clamp(22px, calc(22px + (24 - 22) * ((100vw - 420px) / (1100 - 420))), 24px);
+  --h4-track: -0.2px;
+
+  /* Labels */
+  --label-1: clamp(16px, calc(16px + (17 - 16) * ((100vw - 420px) / (1100 - 420))), 17px);
+  --label-1-lh: 20px;  --label-1-track: -0.18px;
+
+  --label-2: clamp(14px, calc(14px + (15 - 14) * ((100vw - 420px) / (1100 - 420))), 15px);
+  --label-2-lh: 18px;  --label-2-track: -0.16px;
+
+  --label-3: clamp(12px, calc(12px + (13 - 12) * ((100vw - 420px) / (1100 - 420))), 13px);
+  --label-3-lh: 16px;  --label-3-track: -0.14px;
+
+  /* Body */
+  --body-1: clamp(15px, calc(15px + (16 - 15) * ((100vw - 420px) / (1100 - 420))), 16px);
+  --body-1-lh: 22px;  --body-1-track: 0px;
+
+  --body-2: clamp(13px, calc(13px + (14 - 13) * ((100vw - 420px) / (1100 - 420))), 14px);
+  --body-2-lh: 20px;  --body-2-track: 0px;
+
+  --body-3: clamp(11px, calc(11px + (12 - 11) * ((100vw - 420px) / (1100 - 420))), 12px);
+  --body-3-lh: 16px;  --body-3-track: 0px;
+
+  /* Tiny & Micro (fixed sizes; micro-adjusts rarely need to scale) */
+  --tiny: 10px;              --tiny-lh: 12px;  --tiny-track: 0px;
+  --tiny-extended: 10px;     --tiny-extended-lh: 12px;  --tiny-extended-track: 1px;
+  --micro: 9px;              --micro-lh: 10px; --micro-track: 0px;
+}
+
+/* Direct CSS classes for immediate visual feedback */
+.text-title-1 {
+  font-size: var(--title-1);
+  line-height: var(--title-1-lh);
+  letter-spacing: var(--title-1-track);
+  font-weight: 600;
+}
+
+.text-title-2 {
+  font-size: var(--title-2);
+  line-height: var(--title-2-lh);
+  letter-spacing: var(--title-2-track);
+  font-weight: 600;
+}
+
+.text-title-3 {
+  font-size: var(--title-3);
+  line-height: var(--title-3-lh);
+  letter-spacing: var(--title-3-track);
+  font-weight: 600;
+}
+
+.text-h1 {
+  font-size: var(--h1);
+  line-height: var(--h1-lh);
+  letter-spacing: var(--h1-track);
+  font-weight: 600;
+}
+
+.text-h2 {
+  font-size: var(--h2);
+  line-height: var(--h2-lh);
+  letter-spacing: var(--h2-track);
+  font-weight: 600;
+}
+
+.text-h3 {
+  font-size: var(--h3);
+  line-height: var(--h3-lh);
+  letter-spacing: var(--h3-track);
+  font-weight: 600;
+}
+
+.text-h4 {
+  font-size: var(--h4);
+  line-height: var(--h4-lh);
+  letter-spacing: var(--h4-track);
+  font-weight: 600;
+}
+
+.text-label-1 {
+  font-size: var(--label-1);
+  line-height: var(--label-1-lh);
+  letter-spacing: var(--label-1-track);
+  font-weight: 400;
+}
+
+.text-label-2 {
+  font-size: var(--label-2);
+  line-height: var(--label-2-lh);
+  letter-spacing: var(--label-2-track);
+  font-weight: 400;
+}
+
+.text-label-3 {
+  font-size: var(--label-3);
+  line-height: var(--label-3-lh);
+  letter-spacing: var(--label-3-track);
+  font-weight: 400;
+}
+
+.text-body-1 {
+  font-size: var(--body-1);
+  line-height: var(--body-1-lh);
+  letter-spacing: var(--body-1-track);
+  font-weight: 400;
+}
+
+.text-body-2 {
+  font-size: var(--body-2);
+  line-height: var(--body-2-lh);
+  letter-spacing: var(--body-2-track);
+  font-weight: 400;
+}
+
+.text-body-3 {
+  font-size: var(--body-3);
+  line-height: var(--body-3-lh);
+  letter-spacing: var(--body-3-track);
+  font-weight: 400;
+}
+
+.text-tiny {
+  font-size: var(--tiny);
+  line-height: var(--tiny-lh);
+  letter-spacing: var(--tiny-track);
+  font-weight: 500;
+}
+
+.text-tiny-extended {
+  font-size: var(--tiny-extended);
+  line-height: var(--tiny-extended-lh);
+  letter-spacing: var(--tiny-extended-track);
+  font-weight: 500;
+}
+
+.text-micro {
+  font-size: var(--micro);
+  line-height: var(--micro-lh);
+  letter-spacing: var(--micro-track);
+  font-weight: 600;
 }

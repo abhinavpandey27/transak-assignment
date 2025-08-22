@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Instrument_Sans } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/common/ThemeProvider";
 
-const inter = Inter({ subsets: ["latin"] });
+const instrumentSans = Instrument_Sans({ 
+  subsets: ["latin"],
+  variable: "--font-instrument-sans"
+});
 
 export const metadata: Metadata = {
   title: "Transak Demo Hub - Crypto Widget Experience",
@@ -16,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+          <html lang="en" suppressHydrationWarning className={instrumentSans.variable}>
+      <body className={instrumentSans.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

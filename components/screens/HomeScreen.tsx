@@ -68,7 +68,7 @@ export function HomeScreen() {
       <div className="flex-1 flex flex-col overflow-hidden">
         {/* Header */}
         <header className="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-700 px-8 py-6">
-          <h1 className="text-2xl font-bold text-slate-900 dark:text-white text-center">
+          <h1 className="text-h1 text-slate-900 dark:text-white text-center">
             Your Wallet
           </h1>
         </header>

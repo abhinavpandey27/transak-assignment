@@ -17,20 +17,30 @@ export default function DemoHub() {
           <div className="flex items-center justify-between">
             {/* Left: Title and Author */}
             <div className="flex items-center space-x-3">
-              <h1 className="text-xl font-bold text-slate-900 dark:text-white">
+              <h1 className="text-h2 text-slate-900 dark:text-white">
                 Transak Demo
               </h1>
-              <span className="text-sm text-slate-500 dark:text-slate-400">
+              <span className="text-body-2 text-slate-500 dark:text-slate-400">
                 built by Abhinav Pandey
               </span>
             </div>
 
             {/* Center: Screen Selector */}
             <div className="flex items-center space-x-4">
-              <span className="text-sm text-slate-600 dark:text-slate-300">
+              <span className="text-body-2 text-slate-600 dark:text-slate-300">
                 Screen:
               </span>
               <ScreenSelect />
+            </div>
+
+            {/* Design System Link */}
+            <div className="flex items-center space-x-4">
+              <a 
+                href="/design-system" 
+                className="text-sm text-blue-600 dark:text-blue-400 hover:underline font-medium"
+              >
+                Design System
+              </a>
             </div>
 
             {/* Right: Device Toggle */}
@@ -45,7 +55,7 @@ export default function DemoHub() {
           <div className="flex items-center justify-center h-64">
             <div className="text-center">
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4"></div>
-              <p className="text-slate-600 dark:text-slate-300">Loading preview...</p>
+              <p className="text-body-2 text-slate-600 dark:text-slate-300">Loading preview...</p>
             </div>
           </div>
         }>

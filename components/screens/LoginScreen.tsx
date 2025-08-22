@@ -54,11 +54,11 @@ export function LoginScreen() {
         <div className="text-center mb-8">
           <div className="flex items-center justify-center space-x-2 mb-4">
             <Wallet className="h-8 w-8 text-blue-600" />
-            <span className="text-2xl font-bold text-slate-900 dark:text-white">
+            <span className="text-title-2 font-bold text-slate-900 dark:text-white">
               {getBrandCopy(brand, "appName", "CryptoRamp")}
             </span>
           </div>
-          <p className="text-slate-600 dark:text-slate-300">
+          <p className="text-body-1 text-slate-600 dark:text-slate-300">
             {getBrandCopy(brand, "login.tagline", "Seamless Crypto On/Off Ramp")}
           </p>
         </div>
@@ -68,7 +68,7 @@ export function LoginScreen() {
           <CardHeader className="text-center pb-4">
             {step === "email" ? (
               <>
-                <CardTitle className="text-2xl">
+                <CardTitle className="text-h1">
                   {getBrandCopy(brand, "login.title", "Welcome Back")}
                 </CardTitle>
                 <CardDescription>
@@ -77,7 +77,7 @@ export function LoginScreen() {
               </>
             ) : (
               <>
-                <CardTitle className="text-2xl">
+                <CardTitle className="text-h1">
                   {getBrandCopy(brand, "login.otpTitle", "Enter OTP")}
                 </CardTitle>
                 <CardDescription>
@@ -98,10 +98,10 @@ export function LoginScreen() {
             ) : (
               <div className="space-y-4">
                 <div className="text-center">
-                  <p className="text-sm text-slate-600 dark:text-slate-300 mb-2">
+                  <p className="text-body-2 text-slate-600 dark:text-slate-300 mb-2">
                     Code sent to:
                   </p>
-                  <p className="font-medium text-slate-900 dark:text-white">
+                  <p className="text-body-1 font-medium text-slate-900 dark:text-white">
                     {email}
                   </p>
                 </div>
@@ -138,7 +138,7 @@ export function LoginScreen() {
 
             {/* Demo Info */}
             <div className="p-3 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
-              <p className="text-xs text-blue-600 dark:text-blue-400 text-center">
+              <p className="text-body-3 text-blue-600 dark:text-blue-400 text-center">
                 <strong>Demo Mode:</strong> Use any valid email format. OTP is always <code className="bg-blue-100 dark:bg-blue-800 px-1 rounded">123456</code>
               </p>
             </div>
